@@ -1,0 +1,17 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "webrtc"
+main = "src/index.ts"
+compatibility_date = "2024-04-03"
+
+[vars]
+CALLS_API = "https://rtc.live.cloudflare.com"
+CALLS_APP_ID = "bbbe8fb2-d4ca-4b67-8642-099396c4b3c0"
+CALLS_APP_SECRET = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmdJZCI6IjZkNjUwNmUzLWY4YjEtNGM3ZC1hYmNjLTFlNzc3YTc5MDU0MiIsIm1lZXRpbmdJZCI6ImJiYmU4ZmIyLWQ0Y2EtNGI2Ny04NjQyLTA5OTM5NmM0YjNjMCIsInBhcnRpY2lwYW50SWQiOiJhYWExODFmZC1kM2IzLTQ2MGMtYWQ0MS03OWViYjdhY2I1MjMiLCJwcmVzZXRJZCI6IjVjN2YwNGEwLWMxOGQtNGJkMS1iNjZmLTFmYTE2NDI1NzQ1YiIsImlhdCI6MTc3NDc2MTE2OCwiZXhwIjoxNzc1MzY1OTY4fQ.Oxhfm7tg8-nEAg7OZep88fbLBUgGqunHTIvaO_7Leg_wuxO8OxdgLq-wVv19tuKE6wXLbVhm_na3OIkmIkI5Zeb4r88P6BP93s86rfZ8VTae60I5YbqNQpESowWnof5SnW643hRO6V1PLcU9gp46YSI87qSOHrO5CawmN_SLTxLIyahJ7HudhyE2GJHJlgOlXE_F3HOcdHYNw642hOvekz7ZHNVoYq76xFY9JV3t_hczvDnpYtMfw6RNOLICn2IIqaOsSjcprozpaiSHW3dORdNLJD7aEXLjPpi-C1Wo35BjCK3gyokqyn5XCBr2dk2UIHkKduK6VJ-Vq7PAbCV7jg"
+
+[[durable_objects.bindings]]
+name = "LIVE_STORE"
+class_name = "LiveStore"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["LiveStore"]
